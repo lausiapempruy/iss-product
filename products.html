@@ -4,20 +4,39 @@
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="ISS Product catalog — products and tools by Indo Squad Studios."
+  >
 
   <title>Products — ISS Product</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="favicon.svg"
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/responsive.css"
+  >
 
 </head>
 
@@ -29,24 +48,44 @@
   <nav class="nav container">
 
     <a class="brand" href="index.html">
-      <span class="brand-mark">ISS</span>
-      <span>Product</span>
+
+      <span class="brand-mark">
+        ISS
+      </span>
+
+      <span>
+        Product
+      </span>
+
     </a>
+
 
     <button
       class="menu-toggle"
       id="menuToggle"
       aria-label="Toggle navigation"
+      aria-expanded="false"
     >
+
       <span></span>
       <span></span>
+
     </button>
 
-    <div class="nav-links" id="navLinks">
 
-      <a href="index.html">Home</a>
+    <div
+      class="nav-links"
+      id="navLinks"
+    >
 
-      <a class="active" href="products.html">
+      <a href="index.html">
+        Home
+      </a>
+
+      <a
+        class="active"
+        href="products.html"
+      >
         Products
       </a>
 
@@ -61,6 +100,7 @@
       <button
         class="theme-toggle"
         id="themeToggle"
+        aria-label="Toggle theme"
       >
         ☾
       </button>
@@ -74,6 +114,7 @@
 
 <main>
 
+
 <section class="page-hero container">
 
   <p class="mini-label">
@@ -85,7 +126,8 @@
   </h1>
 
   <p>
-    Tools, systems, and experiments built under ISS Product.
+    Tools, systems, and experiments built
+    under ISS Product.
   </p>
 
 </section>
@@ -93,9 +135,14 @@
 
 <section class="section container">
 
+
   <div class="product-toolbar">
 
-    <div class="filters" id="filters">
+
+    <div
+      class="filters"
+      id="filters"
+    >
 
       <button
         class="filter active"
@@ -130,12 +177,15 @@
 
     <label class="search-box">
 
-      <span>⌕</span>
+      <span>
+        ⌕
+      </span>
 
       <input
         id="productSearch"
         type="search"
         placeholder="Search products..."
+        autocomplete="off"
       >
 
     </label>
@@ -155,7 +205,7 @@
       class="product-card glass"
       id="customchat"
       data-category="roblox"
-      data-name="customchat"
+      data-name="customchat chat custom v2"
     >
 
       <div class="product-top">
@@ -164,33 +214,128 @@
           CC
         </div>
 
-        <span class="status">
-          In development
+        <span class="status live">
+          Released
         </span>
 
       </div>
+
 
       <p class="product-category">
         ROBLOX
       </p>
 
+
       <h2>
         CustomChat
       </h2>
 
+
       <p>
-        Modern custom chat experience for Roblox
-        projects, with configurable UI and behavior.
+        A modern custom chat system for Roblox
+        using a responsive interface and
+        configurable behavior.
       </p>
 
+
+      <div class="product-tags">
+
+        <span>
+          TextChatService
+        </span>
+
+        <span>
+          Responsive
+        </span>
+
+        <span>
+          v2.0.0
+        </span>
+
+      </div>
+
+
       <div class="product-bottom">
+
         <span>
           ISS Product
         </span>
 
-        <a href="#customchat-details">
+        <a href="info.html?product=customchat">
           Details →
         </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- MAIN MENU SYSTEM -->
+
+    <article
+      class="product-card glass"
+      id="main-menu"
+      data-category="roblox"
+      data-name="main menu system iss main menu"
+    >
+
+      <div class="product-top">
+
+        <div class="product-icon blue">
+          MM
+        </div>
+
+        <span class="status live">
+          Released
+        </span>
+
+      </div>
+
+
+      <p class="product-category">
+        ROBLOX
+      </p>
+
+
+      <h2>
+        Main Menu System
+      </h2>
+
+
+      <p>
+        A fully script-generated Apple-inspired
+        Roblox main menu with responsive controls,
+        settings, credits, and transitions.
+      </p>
+
+
+      <div class="product-tags">
+
+        <span>
+          Script Generated
+        </span>
+
+        <span>
+          Responsive
+        </span>
+
+        <span>
+          Secure
+        </span>
+
+      </div>
+
+
+      <div class="product-bottom">
+
+        <span>
+          ISS Product
+        </span>
+
+        <a href="info.html?product=main-menu">
+          Details →
+        </a>
+
       </div>
 
     </article>
@@ -201,12 +346,12 @@
     <article
       class="product-card glass"
       data-category="web"
-      data-name="iss product website"
+      data-name="iss product website website"
     >
 
       <div class="product-top">
 
-        <div class="product-icon blue">
+        <div class="product-icon gray">
           IP
         </div>
 
@@ -216,76 +361,50 @@
 
       </div>
 
+
       <p class="product-category">
         WEB
       </p>
+
 
       <h2>
         ISS Product Website
       </h2>
 
+
       <p>
-        The product hub you're looking at right now —
-        lightweight, static, and GitHub Pages ready.
+        The official product hub built with
+        HTML, CSS, and Vanilla JavaScript
+        for GitHub Pages.
       </p>
+
+
+      <div class="product-tags">
+
+        <span>
+          HTML
+        </span>
+
+        <span>
+          CSS
+        </span>
+
+        <span>
+          JavaScript
+        </span>
+
+      </div>
+
 
       <div class="product-bottom">
 
         <span>
-          HTML / CSS / JS
+          v1.1
         </span>
 
         <a href="index.html">
           Open →
         </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- COMING SOON -->
-
-    <article
-      class="product-card glass"
-      data-category="utility"
-      data-name="coming soon"
-    >
-
-      <div class="product-top">
-
-        <div class="product-icon gray">
-          +
-        </div>
-
-        <span class="status">
-          Planned
-        </span>
-
-      </div>
-
-      <p class="product-category">
-        UTILITY
-      </p>
-
-      <h2>
-        Coming Soon
-      </h2>
-
-      <p>
-        A future ISS Product tool.
-        This slot is ready for the next idea.
-      </p>
-
-      <div class="product-bottom">
-
-        <span>
-          Stay tuned
-        </span>
-
-        <span>
-          —
-        </span>
 
       </div>
 
@@ -311,60 +430,6 @@
 
   </div>
 
-</section>
-
-
-<section
-  class="section container"
-  id="customchat-details"
->
-
-  <div class="detail-panel glass">
-
-    <div>
-
-      <p class="mini-label">
-        PRODUCT DETAILS
-      </p>
-
-      <h2>
-        CustomChat
-      </h2>
-
-      <p>
-        A dedicated custom chat system for Roblox.
-        This page can later become a full product
-        documentation page when the product is ready.
-      </p>
-
-    </div>
-
-
-    <div class="detail-list">
-
-      <div>
-        <span>Status</span>
-        <strong>In development</strong>
-      </div>
-
-      <div>
-        <span>Platform</span>
-        <strong>Roblox</strong>
-      </div>
-
-      <div>
-        <span>Product family</span>
-        <strong>ISS Product</strong>
-      </div>
-
-      <div>
-        <span>Version</span>
-        <strong>0.x</strong>
-      </div>
-
-    </div>
-
-  </div>
 
 </section>
 
@@ -377,9 +442,19 @@
 
     <div>
 
-      <a class="brand" href="index.html">
-        <span class="brand-mark">ISS</span>
-        <span>Product</span>
+      <a
+        class="brand"
+        href="index.html"
+      >
+
+        <span class="brand-mark">
+          ISS
+        </span>
+
+        <span>
+          Product
+        </span>
+
       </a>
 
       <p>
@@ -407,8 +482,11 @@
 
 
     <p class="copyright">
-      © <span class="year"></span>
+
+      ©
+      <span class="year"></span>
       Indo Squad Studios
+
     </p>
 
   </div>
