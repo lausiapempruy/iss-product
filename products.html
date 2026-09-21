@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Products — ISS Product</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+
+<body>
+
+<header class="site-header">
+
+  <nav class="nav container">
+
+    <a class="brand" href="index.html">
+      <span class="brand-mark">ISS</span>
+      <span>Product</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-links" id="navLinks">
+
+      <a href="index.html">Home</a>
+
+      <a class="active" href="products.html">
+        Products
+      </a>
+
+      <a href="changelog.html">
+        Changelog
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+      >
+        ☾
+      </button>
+
+    </div>
+
+  </nav>
+
+</header>
+
+
+<main>
+
+<section class="page-hero container">
+
+  <p class="mini-label">
+    THE ECOSYSTEM
+  </p>
+
+  <h1>
+    Products.
+  </h1>
+
+  <p>
+    Tools, systems, and experiments built under ISS Product.
+  </p>
+
+</section>
+
+
+<section class="section container">
+
+  <div class="product-toolbar">
+
+    <div class="filters" id="filters">
+
+      <button
+        class="filter active"
+        data-filter="all"
+      >
+        All
+      </button>
+
+      <button
+        class="filter"
+        data-filter="roblox"
+      >
+        Roblox
+      </button>
+
+      <button
+        class="filter"
+        data-filter="web"
+      >
+        Web
+      </button>
+
+      <button
+        class="filter"
+        data-filter="utility"
+      >
+        Utility
+      </button>
+
+    </div>
+
+
+    <label class="search-box">
+
+      <span>⌕</span>
+
+      <input
+        id="productSearch"
+        type="search"
+        placeholder="Search products..."
+      >
+
+    </label>
+
+  </div>
+
+
+  <div
+    class="products-grid"
+    id="productsGrid"
+  >
+
+
+    <!-- CUSTOMCHAT -->
+
+    <article
+      class="product-card glass"
+      id="customchat"
+      data-category="roblox"
+      data-name="customchat"
+    >
+
+      <div class="product-top">
+
+        <div class="product-icon purple">
+          CC
+        </div>
+
+        <span class="status">
+          In development
+        </span>
+
+      </div>
+
+      <p class="product-category">
+        ROBLOX
+      </p>
+
+      <h2>
+        CustomChat
+      </h2>
+
+      <p>
+        Modern custom chat experience for Roblox
+        projects, with configurable UI and behavior.
+      </p>
+
+      <div class="product-bottom">
+        <span>
+          ISS Product
+        </span>
+
+        <a href="#customchat-details">
+          Details →
+        </a>
+      </div>
+
+    </article>
+
+
+    <!-- WEBSITE -->
+
+    <article
+      class="product-card glass"
+      data-category="web"
+      data-name="iss product website"
+    >
+
+      <div class="product-top">
+
+        <div class="product-icon blue">
+          IP
+        </div>
+
+        <span class="status live">
+          Live
+        </span>
+
+      </div>
+
+      <p class="product-category">
+        WEB
+      </p>
+
+      <h2>
+        ISS Product Website
+      </h2>
+
+      <p>
+        The product hub you're looking at right now —
+        lightweight, static, and GitHub Pages ready.
+      </p>
+
+      <div class="product-bottom">
+
+        <span>
+          HTML / CSS / JS
+        </span>
+
+        <a href="index.html">
+          Open →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- COMING SOON -->
+
+    <article
+      class="product-card glass"
+      data-category="utility"
+      data-name="coming soon"
+    >
+
+      <div class="product-top">
+
+        <div class="product-icon gray">
+          +
+        </div>
+
+        <span class="status">
+          Planned
+        </span>
+
+      </div>
+
+      <p class="product-category">
+        UTILITY
+      </p>
+
+      <h2>
+        Coming Soon
+      </h2>
+
+      <p>
+        A future ISS Product tool.
+        This slot is ready for the next idea.
+      </p>
+
+      <div class="product-bottom">
+
+        <span>
+          Stay tuned
+        </span>
+
+        <span>
+          —
+        </span>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+
+  <div
+    class="empty-state"
+    id="emptyState"
+    hidden
+  >
+
+    <h3>
+      No products found.
+    </h3>
+
+    <p>
+      Try another search or category.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section
+  class="section container"
+  id="customchat-details"
+>
+
+  <div class="detail-panel glass">
+
+    <div>
+
+      <p class="mini-label">
+        PRODUCT DETAILS
+      </p>
+
+      <h2>
+        CustomChat
+      </h2>
+
+      <p>
+        A dedicated custom chat system for Roblox.
+        This page can later become a full product
+        documentation page when the product is ready.
+      </p>
+
+    </div>
+
+
+    <div class="detail-list">
+
+      <div>
+        <span>Status</span>
+        <strong>In development</strong>
+      </div>
+
+      <div>
+        <span>Platform</span>
+        <strong>Roblox</strong>
+      </div>
+
+      <div>
+        <span>Product family</span>
+        <strong>ISS Product</strong>
+      </div>
+
+      <div>
+        <span>Version</span>
+        <strong>0.x</strong>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container footer-inner">
+
+    <div>
+
+      <a class="brand" href="index.html">
+        <span class="brand-mark">ISS</span>
+        <span>Product</span>
+      </a>
+
+      <p>
+        Part of Indo Squad Studios.
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <a href="products.html">
+        Products
+      </a>
+
+      <a href="changelog.html">
+        Changelog
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+    </div>
+
+
+    <p class="copyright">
+      © <span class="year"></span>
+      Indo Squad Studios
+    </p>
+
+  </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+<script src="js/products.js"></script>
+
+</body>
+</html>
