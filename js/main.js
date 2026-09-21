@@ -1,23 +1,39 @@
 (() => {
 
-  const root = document.documentElement;
+  const root =
+    document.documentElement;
+
 
   const themeButton =
-    document.getElementById("themeToggle");
+    document.getElementById(
+      "themeToggle"
+    );
+
 
   const menuButton =
-    document.getElementById("menuToggle");
+    document.getElementById(
+      "menuToggle"
+    );
+
 
   const navLinks =
-    document.getElementById("navLinks");
+    document.getElementById(
+      "navLinks"
+    );
 
 
   /*
+   * =========================
    * THEME
+   * =========================
    */
 
+
   const savedTheme =
-    localStorage.getItem("iss-theme");
+    localStorage.getItem(
+      "iss-theme"
+    );
+
 
   const preferredDark =
     window.matchMedia(
@@ -27,7 +43,11 @@
 
   const initialTheme =
     savedTheme ||
-    (preferredDark ? "dark" : "light");
+    (
+      preferredDark
+        ? "dark"
+        : "light"
+    );
 
 
   root.dataset.theme =
@@ -36,7 +56,10 @@
 
   function updateThemeIcon() {
 
-    if (!themeButton) return;
+    if (!themeButton) {
+      return;
+    }
+
 
     themeButton.textContent =
       root.dataset.theme === "dark"
@@ -76,8 +99,11 @@
 
 
   /*
-   * MOBILE MENU
+   * =========================
+   * MOBILE NAV
+   * =========================
    */
+
 
   menuButton?.addEventListener(
     "click",
@@ -110,6 +136,7 @@
             "open"
           );
 
+
           menuButton?.setAttribute(
             "aria-expanded",
             "false"
@@ -122,16 +149,117 @@
 
 
   /*
-   * COPYRIGHT YEAR
+   * =========================
+   * YEAR
+   * =========================
    */
+
 
   document
     .querySelectorAll(".year")
     .forEach(element => {
 
       element.textContent =
-        new Date().getFullYear();
+        new Date()
+          .getFullYear();
 
     });
+
+
+  /*
+   * =========================
+   * PRODUCT INFO ROUTING
+   * =========================
+   */
+
+
+  const productInfo =
+    document.getElementById(
+      "productInfo"
+    );
+
+
+  if (productInfo) {
+
+    const params =
+      new URLSearchParams(
+        window.location.search
+      );
+
+
+    const selectedProduct =
+      params.get("product");
+
+
+    const sections =
+      document.querySelectorAll(
+        "[data-product]"
+      );
+
+
+    /*
+     * Default:
+     * CustomChat
+     */
+
+
+    if (
+      !selectedProduct ||
+      (
+        selectedProduct !== "customchat" &&
+        selectedProduct !== "main-menu"
+      )
+    ) {
+
+      sections.forEach(section => {
+
+        section.style.display =
+          section.dataset.product ===
+          "customchat"
+            ? ""
+            : "none";
+
+      });
+
+      document.title =
+        "CustomChat — ISS Product";
+
+    }
+
+
+    else {
+
+      sections.forEach(section => {
+
+        section.style.display =
+          section.dataset.product ===
+          selectedProduct
+            ? ""
+            : "none";
+
+      });
+
+
+      if (
+        selectedProduct ===
+        "main-menu"
+      ) {
+
+        document.title =
+          "Main Menu System — ISS Product";
+
+      }
+
+
+      else {
+
+        document.title =
+          "CustomChat — ISS Product";
+
+      }
+
+    }
+
+  }
 
 })();
