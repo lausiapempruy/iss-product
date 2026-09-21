@@ -1,0 +1,89 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 128 128"
+>
+  <defs>
+
+    <linearGradient
+      id="bg"
+      x1="0"
+      y1="0"
+      x2="1"
+      y2="1"
+    >
+      <stop
+        offset="0%"
+        stop-color="#111111"
+      />
+
+      <stop
+        offset="100%"
+        stop-color="#555555"
+      />
+    </linearGradient>
+
+    <linearGradient
+      id="shine"
+      x1="0"
+      y1="0"
+      x2="0"
+      y2="1"
+    >
+      <stop
+        offset="0%"
+        stop-color="#ffffff"
+        stop-opacity=".18"
+      />
+
+      <stop
+        offset="100%"
+        stop-color="#ffffff"
+        stop-opacity="0"
+      />
+
+    </linearGradient>
+
+  </defs>
+
+
+  <rect
+    width="128"
+    height="128"
+    rx="32"
+    fill="url(#bg)"
+  />
+
+
+  <rect
+    x="3"
+    y="3"
+    width="122"
+    height="62"
+    rx="29"
+    fill="url(#shine)"
+  />
+
+
+  <text
+    x="64"
+    y="78"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    fill="white"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="39"
+    font-weight="800"
+    letter-spacing="-3"
+  >
+    ISS
+  </text>
+
+
+  <circle
+    cx="103"
+    cy="25"
+    r="5"
+    fill="#8e7cff"
+  />
+
+</svg>
