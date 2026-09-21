@@ -28,7 +28,8 @@
     );
 
 
-  let activeFilter = "all";
+  let activeFilter =
+    "all";
 
 
   function render() {
@@ -41,7 +42,8 @@
         .toLowerCase();
 
 
-    let visible = 0;
+    let visible =
+      0;
 
 
     cards.forEach(card => {
@@ -71,19 +73,25 @@
 
 
       card.style.display =
-        show ? "" : "none";
+        show
+          ? ""
+          : "none";
 
 
       if (show) {
+
         visible++;
+
       }
 
     });
 
 
     if (empty) {
+
       empty.hidden =
         visible !== 0;
+
     }
 
   }
@@ -96,9 +104,11 @@
       () => {
 
         filters.forEach(item => {
+
           item.classList.remove(
             "active"
           );
+
         });
 
 
