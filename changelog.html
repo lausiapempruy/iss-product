@@ -1,321 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta charset="UTF-8">
+    <title>Changelog | ISS Product</title>
+    <meta
+        name="description"
+        content="ISS Product release history."
+    >
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Changelog | ISS Product">
+    <meta property="og:description" content="ISS Product release history.">
+    <meta property="og:image" content="og-image.svg">
 
-  <title>Changelog — ISS Product</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-  <link
-    rel="icon"
-    type="image/svg+xml"
-    href="favicon.svg"
-  >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
-  <link
-    rel="stylesheet"
-    href="css/style.css"
-  >
-
-  <link
-    rel="stylesheet"
-    href="css/responsive.css"
-  >
-
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 
 <body>
 
 <header class="site-header">
+    <nav class="nav container">
 
-  <nav class="nav container">
+        <a href="index.html" class="brand">
+            <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 40 40">
+                    <rect x="1.5" y="1.5" width="37" height="37" rx="11"></rect>
+                    <path d="M12 13h16M12 20h11M12 27h16"></path>
+                    <circle cx="27" cy="20" r="3"></circle>
+                </svg>
+            </span>
 
-    <a class="brand" href="index.html">
+            <span class="brand-text">
+                <strong>ISS Product</strong>
+                <small>Indo Squad Studios</small>
+            </span>
+        </a>
 
-      <span class="brand-mark">
-        ISS
-      </span>
+        <button class="mobile-menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+        </button>
 
-      <span>
-        Product
-      </span>
+        <div class="nav-links" id="site-navigation">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="changelog.html" class="active">Changelog</a>
+            <a href="about.html">About</a>
+        </div>
 
-    </a>
+        <button class="theme-button" id="theme-toggle" type="button" aria-label="Toggle theme">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M3 12h2M19 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                <circle cx="12" cy="12" r="4"></circle>
+            </svg>
+        </button>
 
-
-    <button
-      class="menu-toggle"
-      id="menuToggle"
-      aria-label="Toggle navigation"
-    >
-
-      <span></span>
-      <span></span>
-
-    </button>
-
-
-    <div
-      class="nav-links"
-      id="navLinks"
-    >
-
-      <a href="index.html">
-        Home
-      </a>
-
-      <a href="products.html">
-        Products
-      </a>
-
-      <a
-        class="active"
-        href="changelog.html"
-      >
-        Changelog
-      </a>
-
-      <a href="about.html">
-        About
-      </a>
-
-      <button
-        class="theme-toggle"
-        id="themeToggle"
-      >
-        ☾
-      </button>
-
-    </div>
-
-  </nav>
-
+    </nav>
 </header>
-
 
 <main>
 
-<section class="page-hero container">
+<section class="content-page container">
 
-  <p class="mini-label">
-    WHAT'S NEW
-  </p>
+    <p class="eyebrow">RELEASE HISTORY</p>
 
-  <h1>
-    Changelog.
-  </h1>
+    <h1>Changelog</h1>
 
-  <p>
-    Updates, releases, and small steps forward
-    across ISS Product.
-  </p>
+    <h2>v1.2.0</h2>
 
-</section>
+    <p>
+        Anti-slop visual and content cleanup.
+    </p>
 
+    <ul>
+        <li>Removed blue-purple gradient styling.</li>
+        <li>Removed decorative hero badges.</li>
+        <li>Removed unnecessary promotional statistics.</li>
+        <li>Removed fake testimonials and customer counts.</li>
+        <li>Reduced animation usage.</li>
+        <li>Improved mobile navigation and responsive layouts.</li>
+        <li>Added real Privacy, Terms, and Contact pages.</li>
+        <li>Added OpenGraph metadata.</li>
+        <li>Kept and integrated the custom ISS favicon.</li>
+        <li>Reworked the logo into a graphical inline SVG mark.</li>
+        <li>Removed emoji-based interface icons.</li>
+        <li>Removed decorative tech-stack marketing.</li>
+        <li>Removed fake system-status indicators.</li>
+        <li>Removed artificial reviews, metrics, and visitor counters.</li>
+        <li>Removed unnecessary pricing and authentication mockups.</li>
+        <li>Replaced vague promotional copy with concrete product information.</li>
+    </ul>
 
-<section class="section container">
+    <h2>v1.1.0</h2>
 
-  <div class="timeline">
-
-
-    <!-- v1.1 -->
-
-    <article class="timeline-item">
-
-      <div class="timeline-dot"></div>
-
-      <div class="timeline-date">
-        September 21, 2026
-      </div>
-
-
-      <div class="timeline-content glass">
-
-        <span class="version">
-          v1.1
-        </span>
-
-        <h2>
-          Product ecosystem update
-        </h2>
-
-        <p>
-          ISS Product gets its first major website
-          update with expanded product information
-          and a new detailed product page system.
-        </p>
-
-
-        <ul>
-
-          <li>
-            Added custom SVG favicon
-          </li>
-
-          <li>
-            Added Main Menu System
-          </li>
-
-          <li>
-            Added detailed product information page
-          </li>
-
-          <li>
-            Added Creator Store links
-          </li>
-
-          <li>
-            Updated product catalog
-          </li>
-
-          <li>
-            Updated homepage featured products
-          </li>
-
-          <li>
-            Added product feature sections
-          </li>
-
-        </ul>
-
-      </div>
-
-    </article>
-
-
-    <!-- v1.0 -->
-
-    <article class="timeline-item">
-
-      <div class="timeline-dot"></div>
-
-      <div class="timeline-date">
-        September 2026
-      </div>
-
-
-      <div class="timeline-content glass">
-
-        <span class="version">
-          v1.0
-        </span>
-
-        <h2>
-          ISS Product launches
-        </h2>
-
-        <p>
-          The first version of the ISS Product website
-          goes live with a product catalog, responsive
-          navigation, theme switching, and changelog.
-        </p>
-
-
-        <ul>
-
-          <li>
-            New product hub
-          </li>
-
-          <li>
-            Responsive layout
-          </li>
-
-          <li>
-            Dark mode
-          </li>
-
-          <li>
-            Product filtering and search
-          </li>
-
-          <li>
-            GitHub Pages support
-          </li>
-
-        </ul>
-
-      </div>
-
-    </article>
-
-
-  </div>
+    <p>
+        Added product information pages, Main Menu System to the catalog,
+        and the ISS Product favicon.
+    </p>
 
 </section>
 
 </main>
 
-
-<footer class="footer">
-
-  <div class="container footer-inner">
-
-    <div>
-
-      <a
-        class="brand"
-        href="index.html"
-      >
-
-        <span class="brand-mark">
-          ISS
-        </span>
-
-        <span>
-          Product
-        </span>
-
-      </a>
-
-      <p>
-        Part of Indo Squad Studios.
-      </p>
-
+<footer class="site-footer">
+    <div class="container footer-bottom">
+        <span>© <span data-current-year></span> Indo Squad Studios.</span>
+        <span>ISS Product v1.2.0</span>
     </div>
-
-
-    <div class="footer-links">
-
-      <a href="products.html">
-        Products
-      </a>
-
-      <a href="changelog.html">
-        Changelog
-      </a>
-
-      <a href="about.html">
-        About
-      </a>
-
-    </div>
-
-
-    <p class="copyright">
-
-      ©
-      <span class="year"></span>
-      Indo Squad Studios
-
-    </p>
-
-  </div>
-
 </footer>
-
 
 <script src="js/main.js"></script>
 
