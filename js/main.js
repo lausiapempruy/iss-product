@@ -1,265 +1,52 @@
-(() => {
+document.addEventListener("DOMContentLoaded", () => {
 
-  const root =
-    document.documentElement;
+    const body = document.body;
 
+    const menuButton = document.querySelector(".mobile-menu-button");
+    const navigation = document.querySelector(".nav-links");
 
-  const themeButton =
-    document.getElementById(
-      "themeToggle"
-    );
+    if (menuButton && navigation) {
+        menuButton.addEventListener("click", () => {
+            const isOpen = navigation.classList.toggle("open");
 
+            menuButton.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+        });
 
-  const menuButton =
-    document.getElementById(
-      "menuToggle"
-    );
-
-
-  const navLinks =
-    document.getElementById(
-      "navLinks"
-    );
-
-
-  /*
-   * =========================
-   * THEME
-   * =========================
-   */
-
-
-  const savedTheme =
-    localStorage.getItem(
-      "iss-theme"
-    );
-
-
-  const preferredDark =
-    window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-
-
-  const initialTheme =
-    savedTheme ||
-    (
-      preferredDark
-        ? "dark"
-        : "light"
-    );
-
-
-  root.dataset.theme =
-    initialTheme;
-
-
-  function updateThemeIcon() {
-
-    if (!themeButton) {
-      return;
+        navigation.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                navigation.classList.remove("open");
+                menuButton.setAttribute("aria-expanded", "false");
+            });
+        });
     }
 
+    const themeButton = document.getElementById("theme-toggle");
 
-    themeButton.textContent =
-      root.dataset.theme === "dark"
-        ? "☀"
-        : "☾";
+    const savedTheme = localStorage.getItem("iss-theme");
 
-  }
-
-
-  updateThemeIcon();
-
-
-  themeButton?.addEventListener(
-    "click",
-    () => {
-
-      const next =
-        root.dataset.theme === "dark"
-          ? "light"
-          : "dark";
-
-
-      root.dataset.theme =
-        next;
-
-
-      localStorage.setItem(
-        "iss-theme",
-        next
-      );
-
-
-      updateThemeIcon();
-
+    if (savedTheme === "dark") {
+        body.classList.add("dark");
     }
-  );
 
+    if (themeButton) {
+        themeButton.addEventListener("click", () => {
 
-  /*
-   * =========================
-   * MOBILE NAV
-   * =========================
-   */
+            body.classList.toggle("dark");
 
-
-  menuButton?.addEventListener(
-    "click",
-    () => {
-
-      const open =
-        navLinks.classList.toggle(
-          "open"
-        );
-
-
-      menuButton.setAttribute(
-        "aria-expanded",
-        String(open)
-      );
-
+            localStorage.setItem(
+                "iss-theme",
+                body.classList.contains("dark")
+                    ? "dark"
+                    : "light"
+            );
+        });
     }
-  );
 
-
-  navLinks
-    ?.querySelectorAll("a")
-    .forEach(link => {
-
-      link.addEventListener(
-        "click",
-        () => {
-
-          navLinks.classList.remove(
-            "open"
-          );
-
-
-          menuButton?.setAttribute(
-            "aria-expanded",
-            "false"
-          );
-
-        }
-      );
-
+    document.querySelectorAll("[data-current-year]").forEach(element => {
+        element.textContent = new Date().getFullYear();
     });
 
-
-  /*
-   * =========================
-   * YEAR
-   * =========================
-   */
-
-
-  document
-    .querySelectorAll(".year")
-    .forEach(element => {
-
-      element.textContent =
-        new Date()
-          .getFullYear();
-
-    });
-
-
-  /*
-   * =========================
-   * PRODUCT INFO ROUTING
-   * =========================
-   */
-
-
-  const productInfo =
-    document.getElementById(
-      "productInfo"
-    );
-
-
-  if (productInfo) {
-
-    const params =
-      new URLSearchParams(
-        window.location.search
-      );
-
-
-    const selectedProduct =
-      params.get("product");
-
-
-    const sections =
-      document.querySelectorAll(
-        "[data-product]"
-      );
-
-
-    /*
-     * Default:
-     * CustomChat
-     */
-
-
-    if (
-      !selectedProduct ||
-      (
-        selectedProduct !== "customchat" &&
-        selectedProduct !== "main-menu"
-      )
-    ) {
-
-      sections.forEach(section => {
-
-        section.style.display =
-          section.dataset.product ===
-          "customchat"
-            ? ""
-            : "none";
-
-      });
-
-      document.title =
-        "CustomChat — ISS Product";
-
-    }
-
-
-    else {
-
-      sections.forEach(section => {
-
-        section.style.display =
-          section.dataset.product ===
-          selectedProduct
-            ? ""
-            : "none";
-
-      });
-
-
-      if (
-        selectedProduct ===
-        "main-menu"
-      ) {
-
-        document.title =
-          "Main Menu System — ISS Product";
-
-      }
-
-
-      else {
-
-        document.title =
-          "CustomChat — ISS Product";
-
-      }
-
-    }
-
-  }
-
-})();
+});
