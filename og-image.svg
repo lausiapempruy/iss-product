@@ -1,0 +1,62 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="630" fill="#F4F1EA"/>
+
+    <rect x="74" y="74" width="92" height="92" rx="27" fill="#161616"/>
+
+    <path
+        d="M101 105H139M101 120H130M101 135H139"
+        stroke="#F4F1EA"
+        stroke-width="6"
+        stroke-linecap="round"
+    />
+
+    <circle cx="137" cy="120" r="7" fill="#E34B32"/>
+
+    <text
+        x="74"
+        y="260"
+        fill="#161616"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="76"
+        font-weight="800"
+        letter-spacing="-4"
+    >
+        ISS Product
+    </text>
+
+    <text
+        x="78"
+        y="316"
+        fill="#62605A"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="28"
+        font-weight="500"
+    >
+        Roblox systems by Indo Squad Studios
+    </text>
+
+    <rect x="78" y="390" width="1044" height="1" fill="#D9D5CC"/>
+
+    <text
+        x="78"
+        y="456"
+        fill="#E34B32"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="20"
+        font-weight="700"
+        letter-spacing="4"
+    >
+        ISS PRODUCT / V1.2.0
+    </text>
+
+    <text
+        x="78"
+        y="505"
+        fill="#62605A"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="22"
+        font-weight="400"
+    >
+        Clean product information for Roblox developers.
+    </text>
+</svg>
